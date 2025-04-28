@@ -1,11 +1,11 @@
 pipeline {
   agent {
-    docker { image 'node:16-alpine' }
+    docker { image 'node:16-alpine' } //Docker image for node js
   }
   stages {
     stage('Test') {
       steps {
-        sh 'node --version'
+        sh 'node --version' //checking node js version
       }
     }
   }
