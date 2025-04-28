@@ -9,5 +9,13 @@ pipeline {
         sh 'mvn --version'
       }
     }
+    stage ("Frontend") {
+      agent {
+        docker { image 'node:lts-alpine' }
+      }
+      steps {
+        sh 'node --version'
+      }
+    }
   }
 }
